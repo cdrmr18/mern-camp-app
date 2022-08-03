@@ -1,7 +1,17 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const Campground = require("./models/campground");
+const mongoose = require("mongoose");
 
+mongoose
+  .connect("mongodb://localhost:27017/campy")
+  .then(() => {
+    console.log("Connection open");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
