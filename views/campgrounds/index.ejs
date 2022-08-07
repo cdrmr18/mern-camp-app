@@ -4,11 +4,10 @@
 
 <div class="cards">
   <% for(let campground of campgrounds) { %>
-  <div class="card mb-3" style="width: 18rem">
-    <img src="<%= campground.image %>" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title"><%= campground.title %></h5>
-      <p class="card-text"><%= campground.description %></p>
+  <div class="card text-bg-dark mb-3">
+    <img src="<%= campground.image %>" class="card-img" alt="..." />
+    <div class="card-img-overlay">
+      <h2 class="card-title"><%= campground.title %></h2>
       <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary"
         >More info</a
       >
