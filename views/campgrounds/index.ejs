@@ -7,10 +7,10 @@
   <div class="card mb-3" style="width: 18rem">
     <img src="<%= campground.image %>" class="card-img-top" alt="..." />
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 class="card-title"><%= campground.title %></h5>
       <p class="card-text"><%= campground.description %></p>
       <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary"
-        ><%= campground.title %></a
+        >More info</a
       >
     </div>
   </div>
