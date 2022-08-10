@@ -2,16 +2,28 @@
 <h1>All campgrounds on Campy</h1>
 <a href="/campgrounds/new">Add a campground</a>
 
-<div class="cards">
-  <% for(let campground of campgrounds) { %>
-  <div class="card text-bg-dark mb-3">
-    <img src="<%= campground.image %>" class="card-img" alt="..." />
-    <div class="card-img-overlay">
-      <h2 class="card-title"><%= campground.title %></h2>
-      <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary"
-        >More info</a
-      >
+<% for (campground of campgrounds) { %>
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        src="<%= campground.image %>"
+        class="img-fluid w-100 h-100 rounded-start"
+        alt="<%= campground.title %> campground"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= campground.title %></h5>
+        <p class="card-text">T<%= campground.description %>.</p>
+        <p class="card-text">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </p>
+        <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary"
+          >More info</a
+        >
+      </div>
     </div>
   </div>
-  <% } %>
 </div>
+<% } %>
